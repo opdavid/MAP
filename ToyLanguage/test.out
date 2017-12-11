@@ -1,0 +1,257 @@
+ExeStack:
+ReadFile(f; c);print(c);if(c) then ReadFile(f; c);print(c) else print(0) end
+OpenFile(f; test.in)
+SymTable:
+Output:
+FileTable:
+Heap:
+*************
+ExeStack:
+ReadFile(f; c);print(c);if(c) then ReadFile(f; c);print(c) else print(0) end
+SymTable:
+f=1
+Output:
+FileTable:
+1=test.in
+Heap:
+*************
+ExeStack:
+print(c);if(c) then ReadFile(f; c);print(c) else print(0) end
+ReadFile(f; c)
+SymTable:
+f=1
+Output:
+FileTable:
+1=test.in
+Heap:
+*************
+ExeStack:
+print(c);if(c) then ReadFile(f; c);print(c) else print(0) end
+SymTable:
+c=15
+f=1
+Output:
+FileTable:
+1=test.in
+Heap:
+*************
+ExeStack:
+if(c) then ReadFile(f; c);print(c) else print(0) end
+print(c)
+SymTable:
+c=15
+f=1
+Output:
+FileTable:
+1=test.in
+Heap:
+*************
+ExeStack:
+if(c) then ReadFile(f; c);print(c) else print(0) end
+SymTable:
+c=15
+f=1
+Output:
+15
+FileTable:
+1=test.in
+Heap:
+*************
+ExeStack:
+ReadFile(f; c);print(c)
+SymTable:
+c=15
+f=1
+Output:
+15
+FileTable:
+1=test.in
+Heap:
+*************
+ExeStack:
+print(c)
+ReadFile(f; c)
+SymTable:
+c=15
+f=1
+Output:
+15
+FileTable:
+1=test.in
+Heap:
+*************
+ExeStack:
+print(c)
+SymTable:
+c=50
+f=1
+Output:
+15
+FileTable:
+1=test.in
+Heap:
+*************
+ExeStack:
+SymTable:
+c=50
+f=1
+Output:
+15
+50
+FileTable:
+1=test.in
+Heap:
+*************
+ExeStack:
+SymTable:
+c=50
+f=1
+Output:
+15
+50
+FileTable:
+Heap:
+*************
+ExeStack:
+ while(v - 4) { print(v);v = v - 1 };print(v)
+v = 6
+SymTable:
+Output:
+FileTable:
+Heap:
+*************
+ExeStack:
+ while(v - 4) { print(v);v = v - 1 };print(v)
+SymTable:
+v=6
+Output:
+FileTable:
+Heap:
+*************
+ExeStack:
+print(v)
+ while(v - 4) { print(v);v = v - 1 }
+SymTable:
+v=6
+Output:
+FileTable:
+Heap:
+*************
+ExeStack:
+print(v)
+ while(v - 4) { print(v);v = v - 1 }
+print(v);v = v - 1
+SymTable:
+v=6
+Output:
+FileTable:
+Heap:
+*************
+ExeStack:
+print(v)
+ while(v - 4) { print(v);v = v - 1 }
+v = v - 1
+print(v)
+SymTable:
+v=6
+Output:
+FileTable:
+Heap:
+*************
+ExeStack:
+print(v)
+ while(v - 4) { print(v);v = v - 1 }
+v = v - 1
+SymTable:
+v=6
+Output:
+6
+FileTable:
+Heap:
+*************
+ExeStack:
+print(v)
+ while(v - 4) { print(v);v = v - 1 }
+SymTable:
+v=5
+Output:
+6
+FileTable:
+Heap:
+*************
+ExeStack:
+print(v)
+ while(v - 4) { print(v);v = v - 1 }
+print(v);v = v - 1
+SymTable:
+v=5
+Output:
+6
+FileTable:
+Heap:
+*************
+ExeStack:
+print(v)
+ while(v - 4) { print(v);v = v - 1 }
+v = v - 1
+print(v)
+SymTable:
+v=5
+Output:
+6
+FileTable:
+Heap:
+*************
+ExeStack:
+print(v)
+ while(v - 4) { print(v);v = v - 1 }
+v = v - 1
+SymTable:
+v=5
+Output:
+6
+5
+FileTable:
+Heap:
+*************
+ExeStack:
+print(v)
+ while(v - 4) { print(v);v = v - 1 }
+SymTable:
+v=4
+Output:
+6
+5
+FileTable:
+Heap:
+*************
+ExeStack:
+print(v)
+SymTable:
+v=4
+Output:
+6
+5
+FileTable:
+Heap:
+*************
+ExeStack:
+SymTable:
+v=4
+Output:
+6
+5
+4
+FileTable:
+Heap:
+*************
+ExeStack:
+SymTable:
+v=4
+Output:
+6
+5
+4
+FileTable:
+Heap:
+*************
