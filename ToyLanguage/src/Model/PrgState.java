@@ -7,6 +7,7 @@ public class PrgState {
     private MyIDictionary<Integer,MyTuple> fileTable;
     private IHeap<Integer> heap;
     private IStm originalProgam;
+    private int id = 1;
 
     public PrgState(MyIStack<IStm> stk, MyDictionary<String, Integer> table, MyIList<Integer> ou, MyIDictionary<Integer,MyTuple> fileTable,IHeap<Integer> heap, IStm prg) {
         this.exeStack = stk;
@@ -15,6 +16,7 @@ public class PrgState {
         this.fileTable = fileTable;
         this.heap = heap;
         this.originalProgam = prg;
+        this.id++;
         stk.push(prg);
     }
 
@@ -42,12 +44,28 @@ public class PrgState {
         this.heap = heap;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public Boolean isNotCompleted() {return !exeStack.isEmpty();}
+
+    public PrgState oneStep(PrgState state) throws MyException {
+        if (exeStack.isEmpty()) {
+            throw new MyException("The stack is empty");
+        }
+        IStm crtStm = exeStack.pop();
+        return crtStm.execute(this);
+    }
 
     @Override
     public String toString() {
         String s = "";
-        s = s + " stmt -> " + originalProgam.toString() + '\n'+ " exeS -> " + exeStack.toString() +'\n'+ " symT -> "
+        s = s + "****** id: " + Integer.toString(id) + "*******" + " stmt -> " + originalProgam.toString() + '\n'+ " exeS -> " + exeStack.toString() +'\n'+ " symT -> "
                 + symTable.toString() +'\n'+" out -> " + out.toString()+'\n'+ "File Table -> "+ fileTable.toString()+'\n'
                 +"heap -> " + heap.toString()+"\n****************";
         return s;

@@ -49,6 +49,8 @@ public class Repository implements IRepository {
             MyIDictionary<Integer,MyTuple> ft = prg.getFileTable();
             IHeap<Integer> heap = prg.getHeap();
 
+            logFile.println("**** id: " + prg.getId()+ "******");
+
             logFile.println("ExeStack:");
             for(IStm stmt: exe.getAll())
                 logFile.println(stmt.toString());

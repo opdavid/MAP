@@ -18,7 +18,7 @@ public class IfStmt implements IStm {
         else
             state.getExeStack().push(ifTrue);
 
-        return state;
+        return null;
     }
 
     @Override

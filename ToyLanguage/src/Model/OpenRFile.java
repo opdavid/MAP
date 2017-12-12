@@ -45,7 +45,7 @@ public class OpenRFile implements IStm {
         } catch (IOException e) {
             throw new MyException(e.getMessage());
         }
-        return state;
+        return null;
     }
 
     @Override

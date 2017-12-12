@@ -19,7 +19,7 @@ public class HeapWritingStm implements IStm {
             throw new MyException("Undeclared variable name");
 
         heap.add(address, value);
-        return state;
+        return null;
     }
 
     @Override

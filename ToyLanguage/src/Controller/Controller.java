@@ -7,25 +7,20 @@ import com.sun.istack.internal.NotNull;
 import java.io.IOException;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ExecutorService;
 import java.util.stream.Collectors;
 
 public class Controller {
     private IRepository repo;
+    private ExecutorService executor;
 
     public Controller(IRepository repo) {
         this.repo = repo;
     }
 
-    private void oneStep(PrgState state) throws MyException {
-        MyIStack<IStm> stk = state.getExeStack();
-        if (stk.isEmpty()) {
-            throw new MyException("The stack is empty");
-        }
-        System.out.println(state);
-        IStm crtStm = stk.pop();
-        crtStm.execute(state);
-    }
+
 
     public void allStep(String key) {
         int index = Integer.parseInt(key) - 1;
@@ -34,7 +29,7 @@ public class Controller {
         MyIStack<IStm> stack = prg.getExeStack();
         while (!stack.isEmpty()) {
             try {
-                oneStep(prg);
+//                oneStep(prg);
                 prg.getHeap().setContent(conservativeGarbageCollector(prg.getSymTable().get().values(), prg.getHeap().get()));
                 repo.logPrgStateExec(prg);
             } catch (MyException e) {
@@ -65,5 +60,11 @@ public class Controller {
                         ex.printStackTrace();
                     }
                 });
+    }
+
+    private List<PrgState> removeCompletedPrg(List<PrgState> inPrgList) {
+        return inPrgList.stream()
+                .filter(p->p.isNotCompleted())
+                .collect(Collectors.toList());
     }
 }

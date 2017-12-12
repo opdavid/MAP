@@ -1,7 +1,7 @@
 package Model;
 import java.util.*;
 
-public class MyDictionary<K, V> implements MyIDictionary<K,V> {
+public class MyDictionary<K, V> implements MyIDictionary<K,V> , Cloneable{
     private Map<K, V> dict = new HashMap<>();
 
     public MyDictionary() {
@@ -57,4 +57,10 @@ public class MyDictionary<K, V> implements MyIDictionary<K,V> {
     public void setContent(Map<K, V> kvMap) {
         this.dict = kvMap;
     }
+
+    public Object clone() throws CloneNotSupportedException {
+        MyDictionary theClone = (MyDictionary) super.clone();
+        return theClone;
+    }
+
 }

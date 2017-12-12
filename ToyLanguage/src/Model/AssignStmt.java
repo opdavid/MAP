@@ -14,7 +14,7 @@ public class AssignStmt implements IStm {
         MyIDictionary<String, Integer> d = state.getSymTable();
         IHeap<Integer> heap = state.getHeap();
         d.add(this.symbol,this.expr.eval(d,heap));
-        return state;
+        return null;
     }
 
     @Override

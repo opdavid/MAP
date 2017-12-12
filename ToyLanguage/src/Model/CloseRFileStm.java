@@ -27,7 +27,7 @@ public class CloseRFileStm implements IStm {
             throw new MyException(e.getMessage());
         }
         state.getFileTable().remove(value);
-        return state;
+        return null;
     }
 
     @Override

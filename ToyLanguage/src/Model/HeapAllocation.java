@@ -17,7 +17,7 @@ public class HeapAllocation implements IStm {
         Integer address = heap.newFreeAllocation(value);
 
         symTable.add(var_name,address);
-        return state;
+        return null;
     }
 
     @Override
