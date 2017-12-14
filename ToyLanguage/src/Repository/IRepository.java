@@ -9,7 +9,7 @@ import java.util.List;
 public interface IRepository {
     void addPrgState(PrgState p);
     PrgState getCtrlPrg(int index);
-    void logPrgStateExec(PrgState prg) throws MyException;
+    void logPrgStateExec(PrgState prg);
     List<PrgState> getPrgList();
     void setPrgList(List<PrgState> prgList);
 }

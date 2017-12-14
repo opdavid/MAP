@@ -1,11 +1,15 @@
 package Model;
 import java.util.*;
 
-public class MyDictionary<K, V> implements MyIDictionary<K,V> , Cloneable{
+public class MyDictionary<K, V> implements MyIDictionary<K,V> {
     private Map<K, V> dict = new HashMap<>();
 
     public MyDictionary() {
         this.dict = new HashMap<>();
+    }
+
+    public MyDictionary(Map<K, V> dict) {
+        this.dict = dict;
     }
 
     @Override
@@ -58,9 +62,9 @@ public class MyDictionary<K, V> implements MyIDictionary<K,V> , Cloneable{
         this.dict = kvMap;
     }
 
-    public Object clone() throws CloneNotSupportedException {
-        MyDictionary theClone = (MyDictionary) super.clone();
-        return theClone;
+    @Override
+    public MyDictionary<K, V> clone() {
+        return new MyDictionary<>(dict);
     }
 
 }

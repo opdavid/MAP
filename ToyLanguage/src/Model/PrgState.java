@@ -54,7 +54,7 @@ public class PrgState {
 
     public Boolean isNotCompleted() {return !exeStack.isEmpty();}
 
-    public PrgState oneStep(PrgState state) throws MyException {
+    public PrgState oneStep() throws MyException {
         if (exeStack.isEmpty()) {
             throw new MyException("The stack is empty");
         }

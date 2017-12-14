@@ -40,7 +40,7 @@ public class Repository implements IRepository {
     }
 
     @Override
-    public void logPrgStateExec(PrgState prg) throws MyException{
+    public void logPrgStateExec(PrgState prg) {
         try(PrintWriter logFile = new PrintWriter(new BufferedWriter(new FileWriter(filename, true))))
         {
             MyIStack<IStm> exe = prg.getExeStack();

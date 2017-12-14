@@ -10,8 +10,9 @@ public class ForkStm implements IStm {
     @Override
     public PrgState execute(PrgState state) throws MyException {
 //        MyDictionary<String,Integer> symTable = (MyDictionary) state.getSymTable().clone();
+        MyDictionary<String,Integer> newSymTable = state.getSymTable().clone();
 
-        PrgState prgState = new PrgState(new MyStack<>(),symTable,new MyList<>(),new MyDictionary<>(),new MyHeap(),stm);
+        PrgState prgState = new PrgState(new MyStack<>(),newSymTable,new MyList<>(),new MyDictionary<>(),new MyHeap(),stm);
         prgState.setId(state.getId()*10);
         return prgState;
     }

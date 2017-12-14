@@ -1,6 +1,7 @@
 package Model;
 
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
@@ -14,4 +15,5 @@ public interface MyIDictionary<K, V> {
     boolean hasKey(K key);
     Map<K,V> get();
     void setContent(Map<K,V> kvMap);
+    MyDictionary<K,V> clone();
 }
