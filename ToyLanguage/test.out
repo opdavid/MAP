@@ -1,257 +1,350 @@
+**** id: 2******
 ExeStack:
-ReadFile(f; c);print(c);if(c) then ReadFile(f; c);print(c) else print(0) end
-OpenFile(f; test.in)
+v = 10;new(a, 22);Model.ForkStm@4554617c;print(v);print(rH(a))
 SymTable:
 Output:
 FileTable:
 Heap:
 *************
+**** id: 2******
 ExeStack:
-ReadFile(f; c);print(c);if(c) then ReadFile(f; c);print(c) else print(0) end
-SymTable:
-f=1
-Output:
-FileTable:
-1=test.in
-Heap:
-*************
-ExeStack:
-print(c);if(c) then ReadFile(f; c);print(c) else print(0) end
-ReadFile(f; c)
-SymTable:
-f=1
-Output:
-FileTable:
-1=test.in
-Heap:
-*************
-ExeStack:
-print(c);if(c) then ReadFile(f; c);print(c) else print(0) end
-SymTable:
-c=15
-f=1
-Output:
-FileTable:
-1=test.in
-Heap:
-*************
-ExeStack:
-if(c) then ReadFile(f; c);print(c) else print(0) end
-print(c)
-SymTable:
-c=15
-f=1
-Output:
-FileTable:
-1=test.in
-Heap:
-*************
-ExeStack:
-if(c) then ReadFile(f; c);print(c) else print(0) end
-SymTable:
-c=15
-f=1
-Output:
-15
-FileTable:
-1=test.in
-Heap:
-*************
-ExeStack:
-ReadFile(f; c);print(c)
-SymTable:
-c=15
-f=1
-Output:
-15
-FileTable:
-1=test.in
-Heap:
-*************
-ExeStack:
-print(c)
-ReadFile(f; c)
-SymTable:
-c=15
-f=1
-Output:
-15
-FileTable:
-1=test.in
-Heap:
-*************
-ExeStack:
-print(c)
-SymTable:
-c=50
-f=1
-Output:
-15
-FileTable:
-1=test.in
-Heap:
-*************
-ExeStack:
-SymTable:
-c=50
-f=1
-Output:
-15
-50
-FileTable:
-1=test.in
-Heap:
-*************
-ExeStack:
-SymTable:
-c=50
-f=1
-Output:
-15
-50
-FileTable:
-Heap:
-*************
-ExeStack:
- while(v - 4) { print(v);v = v - 1 };print(v)
-v = 6
+new(a, 22);Model.ForkStm@4554617c;print(v);print(rH(a))
+v = 10
 SymTable:
 Output:
 FileTable:
 Heap:
 *************
+**** id: 2******
 ExeStack:
- while(v - 4) { print(v);v = v - 1 };print(v)
+new(a, 22);Model.ForkStm@4554617c;print(v);print(rH(a))
+v = 10
 SymTable:
-v=6
 Output:
 FileTable:
 Heap:
 *************
+**** id: 2******
 ExeStack:
-print(v)
- while(v - 4) { print(v);v = v - 1 }
+new(a, 22);Model.ForkStm@4554617c;print(v);print(rH(a))
 SymTable:
-v=6
+v=10
 Output:
 FileTable:
 Heap:
 *************
+**** id: 2******
 ExeStack:
-print(v)
- while(v - 4) { print(v);v = v - 1 }
-print(v);v = v - 1
+new(a, 22);Model.ForkStm@4554617c;print(v);print(rH(a))
 SymTable:
-v=6
+v=10
 Output:
 FileTable:
 Heap:
 *************
+**** id: 2******
 ExeStack:
-print(v)
- while(v - 4) { print(v);v = v - 1 }
-v = v - 1
-print(v)
+Model.ForkStm@4554617c;print(v);print(rH(a))
+new(a, 22)
 SymTable:
-v=6
+v=10
 Output:
 FileTable:
 Heap:
 *************
+**** id: 2******
 ExeStack:
-print(v)
- while(v - 4) { print(v);v = v - 1 }
-v = v - 1
+Model.ForkStm@4554617c;print(v);print(rH(a))
+new(a, 22)
 SymTable:
-v=6
+v=10
 Output:
-6
 FileTable:
 Heap:
 *************
+**** id: 2******
 ExeStack:
-print(v)
- while(v - 4) { print(v);v = v - 1 }
+Model.ForkStm@4554617c;print(v);print(rH(a))
 SymTable:
-v=5
+a=1
+v=10
 Output:
-6
+FileTable:
+Heap:
+1=22
+*************
+**** id: 2******
+ExeStack:
+Model.ForkStm@4554617c;print(v);print(rH(a))
+SymTable:
+a=1
+v=10
+Output:
+FileTable:
+Heap:
+1=22
+*************
+**** id: 2******
+ExeStack:
+print(v);print(rH(a))
+Model.ForkStm@4554617c
+SymTable:
+a=1
+v=10
+Output:
+FileTable:
+Heap:
+1=22
+*************
+**** id: 2******
+ExeStack:
+print(v);print(rH(a))
+Model.ForkStm@4554617c
+SymTable:
+a=1
+v=10
+Output:
+FileTable:
+Heap:
+1=22
+*************
+**** id: 2******
+ExeStack:
+print(v);print(rH(a))
+SymTable:
+a=1
+v=10
+Output:
+FileTable:
+Heap:
+1=22
+*************
+**** id: 20******
+ExeStack:
+wH(a, 30);v = 32;print(v);print(rH(a))
+SymTable:
+a=1
+v=10
+Output:
 FileTable:
 Heap:
 *************
+**** id: 2******
 ExeStack:
-print(v)
- while(v - 4) { print(v);v = v - 1 }
-print(v);v = v - 1
+print(v);print(rH(a))
 SymTable:
-v=5
+a=1
+v=10
 Output:
-6
+FileTable:
+Heap:
+1=22
+*************
+**** id: 20******
+ExeStack:
+wH(a, 30);v = 32;print(v);print(rH(a))
+SymTable:
+a=1
+v=10
+Output:
 FileTable:
 Heap:
 *************
+**** id: 2******
 ExeStack:
-print(v)
- while(v - 4) { print(v);v = v - 1 }
-v = v - 1
+print(rH(a))
 print(v)
 SymTable:
-v=5
+a=1
+v=10
 Output:
-6
 FileTable:
 Heap:
+1=22
 *************
+**** id: 20******
 ExeStack:
-print(v)
- while(v - 4) { print(v);v = v - 1 }
-v = v - 1
+v = 32;print(v);print(rH(a))
+wH(a, 30)
 SymTable:
-v=5
+a=1
+v=10
 Output:
-6
-5
 FileTable:
 Heap:
 *************
+**** id: 2******
 ExeStack:
-print(v)
- while(v - 4) { print(v);v = v - 1 }
-SymTable:
-v=4
-Output:
-6
-5
-FileTable:
-Heap:
-*************
-ExeStack:
+print(rH(a))
 print(v)
 SymTable:
-v=4
+a=1
+v=10
 Output:
-6
-5
+FileTable:
+Heap:
+1=22
+*************
+**** id: 20******
+ExeStack:
+v = 32;print(v);print(rH(a))
+wH(a, 30)
+SymTable:
+a=1
+v=10
+Output:
 FileTable:
 Heap:
 *************
+**** id: 2******
 ExeStack:
+print(rH(a))
 SymTable:
-v=4
+a=1
+v=10
 Output:
-6
-5
-4
+10
+FileTable:
+Heap:
+1=22
+*************
+**** id: 20******
+ExeStack:
+v = 32;print(v);print(rH(a))
+SymTable:
+a=1
+v=10
+Output:
 FileTable:
 Heap:
 *************
+**** id: 2******
+ExeStack:
+print(rH(a))
+SymTable:
+a=1
+v=10
+Output:
+10
+FileTable:
+Heap:
+1=22
+*************
+**** id: 20******
+ExeStack:
+v = 32;print(v);print(rH(a))
+SymTable:
+a=1
+v=10
+Output:
+FileTable:
+Heap:
+*************
+**** id: 2******
 ExeStack:
 SymTable:
-v=4
+a=1
+v=10
 Output:
-6
-5
-4
+10
+22
+FileTable:
+Heap:
+1=22
+*************
+**** id: 20******
+ExeStack:
+print(v);print(rH(a))
+v = 32
+SymTable:
+a=1
+v=10
+Output:
+FileTable:
+Heap:
+*************
+**** id: 20******
+ExeStack:
+print(v);print(rH(a))
+v = 32
+SymTable:
+a=1
+v=10
+Output:
+FileTable:
+Heap:
+*************
+**** id: 20******
+ExeStack:
+print(v);print(rH(a))
+SymTable:
+a=1
+v=32
+Output:
+FileTable:
+Heap:
+*************
+**** id: 20******
+ExeStack:
+print(v);print(rH(a))
+SymTable:
+a=1
+v=32
+Output:
+FileTable:
+Heap:
+*************
+**** id: 20******
+ExeStack:
+print(rH(a))
+print(v)
+SymTable:
+a=1
+v=32
+Output:
+FileTable:
+Heap:
+*************
+**** id: 20******
+ExeStack:
+print(rH(a))
+print(v)
+SymTable:
+a=1
+v=32
+Output:
+FileTable:
+Heap:
+*************
+**** id: 20******
+ExeStack:
+print(rH(a))
+SymTable:
+a=1
+v=32
+Output:
+32
+FileTable:
+Heap:
+*************
+**** id: 20******
+ExeStack:
+print(rH(a))
+SymTable:
+a=1
+v=32
+Output:
+32
+FileTable:
+Heap:
+*************
+**** id: 20******
+ExeStack:
+SymTable:
+a=1
+v=32
+Output:
+32
 FileTable:
 Heap:
 *************

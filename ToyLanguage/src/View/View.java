@@ -110,6 +110,31 @@ public class View {
                 )
         );
 
+        IStm ex8 = new CompStmt(
+                new AssignStmt("v",new ConstExpression(10)),
+                new CompStmt(
+                        new HeapAllocation("a",new ConstExpression(22)),
+                        new CompStmt(
+                                new ForkStm(
+                                        new CompStmt(
+                                                new HeapWritingStm("a",new ConstExpression(30)),
+                                                new CompStmt(
+                                                        new AssignStmt("v",new ConstExpression(32)),
+                                                        new CompStmt(
+                                                                new PrintStmt(new VarExpression("v")),
+                                                                new PrintStmt(new HeapReadingExpression("a"))
+                                                        )
+                                                )
+                                        )
+                                ),
+                                new CompStmt(
+                                        new PrintStmt(new VarExpression("v")),
+                                        new PrintStmt(new HeapReadingExpression("a"))
+                                )
+                        )
+                )
+        );
+
 //        System.out.print("Give the file name: ");
 //        Scanner s = new Scanner(System.in);
 //        String filename = s.nextLine();
@@ -122,15 +147,16 @@ public class View {
         PrgState state5 = new PrgState(new MyStack<>(),new MyDictionary<>(),new MyList<>(),new MyDictionary<>(),new MyHeap(),ex5);
         PrgState state6 = new PrgState(new MyStack<>(),new MyDictionary<>(),new MyList<>(),new MyDictionary<>(),new MyHeap(),ex6);
         PrgState state7 = new PrgState(new MyStack<>(),new MyDictionary<>(),new MyList<>(),new MyDictionary<>(),new MyHeap(),ex7);
+        PrgState state8 = new PrgState(new MyStack<>(),new MyDictionary<>(),new MyList<>(),new MyDictionary<>(),new MyHeap(),ex8);
 
         IRepository r = new Repository("test.out");
-        r.addPrgState(state1);
-        r.addPrgState(state2);
-        r.addPrgState(state3);
-        r.addPrgState(state4);
-        r.addPrgState(state5);
-        r.addPrgState(state6);
-        r.addPrgState(state7);
+        r.addPrgState(state8);
+//        r.addPrgState(state2);
+//        r.addPrgState(state3);
+//        r.addPrgState(state4);
+//        r.addPrgState(state5);
+//        r.addPrgState(state6);
+//        r.addPrgState(state7);
         Controller c = new Controller(r);
 
         TextMenu menu = new TextMenu();
@@ -142,6 +168,7 @@ public class View {
         menu.addCommand(new RunExample("5",ex5.toString(),c));
         menu.addCommand(new RunExample("6",ex6.toString(),c));
         menu.addCommand(new RunExample("7",ex7.toString(),c));
+        menu.addCommand(new RunExample("8",ex8.toString(),c));
         menu.show();
 
     }
