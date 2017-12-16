@@ -16,8 +16,8 @@ public class PrgState {
         this.fileTable = fileTable;
         this.heap = heap;
         this.originalProgam = prg;
-        this.id++;
         stk.push(prg);
+        this.id++;
     }
 
     public MyIStack<IStm> getExeStack() {

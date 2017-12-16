@@ -12,8 +12,13 @@ public class ForkStm implements IStm {
 //        MyDictionary<String,Integer> symTable = (MyDictionary) state.getSymTable().clone();
         MyDictionary<String,Integer> newSymTable = state.getSymTable().clone();
 
-        PrgState prgState = new PrgState(new MyStack<>(),newSymTable,new MyList<>(),new MyDictionary<>(),new MyHeap(),stm);
+        PrgState prgState = new PrgState(new MyStack<>(),newSymTable,state.getOut(),state.getFileTable(),state.getHeap(),stm);
         prgState.setId(state.getId()*10);
         return prgState;
+    }
+
+    @Override
+    public String toString() {
+        return "fork(  " + stm.toString() + "  )";
     }
 }
